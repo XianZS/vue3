@@ -7,7 +7,6 @@ import Person from "@/components/Person.vue";
 
 export default {
     name: 'App', // 暴露主键名
-
     // 注册组件 components
     components: {Person},
 }
