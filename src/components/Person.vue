@@ -1,18 +1,13 @@
 <template>
     <div class="person">
-        <h2>一辆{{car.brand}}车价值{{car.price}}</h2>
-        <button @click="changePrice">点击</button>
+
     </div>
 </template>
 
+
 <script setup lang="ts" name="person">
-    import {ref} from 'vue'
-    // 数据
-    let car=ref({brand:"奔驰",price:100})
-    function changePrice(){
-        car.value.price+=10
-    }
-    console.log(car)
+    import {ref,computed} from 'vue'
+
 </script>
 
 <style scoped>
