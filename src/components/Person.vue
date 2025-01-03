@@ -1,26 +1,18 @@
 <template>
     <div class="person">
-        <h1 id="total">Person-id</h1>
-        <h2 ref="total2">Person-ref</h2>
-        <h3>尚硅谷</h3>
-        <button @click="showLog">点击</button>
+        ???
     </div>
+    <button @click="getPerson()">点击</button>
 </template>
 
 
 <script setup lang="ts" name="Person">
-import {ref} from "vue";
+import {ref} from 'vue'
+import {type Person_inter} from "@/types";
 
-let total2 = ref()
-
-function showLog() {
-    // 如果直接在vue文件中使用id的话，可能在App.vue也出现id相同的情况，所以可能报错
-    let some = document.getElementById("total")
-    console.log(some.innerText);
-    // App-id
-    // 输出：事件
-    console.log(total2.value.innerHTML)
-    // Person-ref
+let person: Person_inter = {id: "1001", name: '张三', age: 18}
+function getPerson(){
+    console.log(person);
 }
 </script>
 
